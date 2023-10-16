@@ -1,7 +1,7 @@
-adms = []
+adms = ['wini']
 cpfADMs = []
 emailADMs = []
-passwordADMs = []
+passwordADMs = [12345]
 users = []
 emailUSER = []
 passwordUSER = []
@@ -86,8 +86,8 @@ while True:
                         edit_id = int(input('Informe o ID da notícia que deseja editar:'))
                         if edit_id in all_news:
                             all_news.pop(edit_id)
-                            question4 = input('Edite a notícia:')
-                            all_news[edit_id] = [question4]
+                            question = input('Edite a notícia:')
+                            all_news[edit_id] = [question]
                             yes_no = input('Deseja editar mais alguma coisa? sim/nao')
                             if yes_no == 'nao':
                                 break
@@ -97,11 +97,11 @@ while True:
                         list_news = int(input('Informe o ID da notícia para busca-la:'))
                         if list_news in all_news:
                             print(all_news[list_news])
-                        else:
-                            print('Digite algo válido')
                             question = input('Deseja continuar procurando? sim/nao')
                             if question == 'nao':
                                 break
+                        else:
+                            print('Digite algo válido')
 
                 elif choice == '6':
                     break
